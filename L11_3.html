@@ -19,8 +19,10 @@
         let node = document.createElement("h2");
         node.innerHTML = "123abc";
         // area.appendChild(node); // 插入到指定元素的最後
-        // area.append(node); // 往最後插, 記憶這個, 因為有對應的 prepend, 比較強大
-        area.prepend(node); // 往最前面插
+        area.insertBefore(node, h1);
+
+        // area.append(node); // 往最後插。記憶這個，因為有對應的 prepend，比較強大，可以同時插入多個新增出來的節點
+        // area.prepend(node); // 往最前面插
     </script>
 </body>
 
