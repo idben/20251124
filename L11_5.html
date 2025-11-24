@@ -26,9 +26,29 @@
             display: flex;
         }
 
-        img {
+        .box img {
             width: 50px;
             height: 50px;
+        }
+
+        .box2 {
+            position: relative;
+            width: fit-content;
+        }
+
+        .box2 .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ed0909;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            cursor: pointer;
         }
     </style>
     <title>刪除元素</title>
@@ -45,11 +65,18 @@
         <div class="right"></div>
     </div>
 
+    <div class="box2">
+        <img src="https://picsum.photos/id/684/300/200" alt="">
+        <div class="close">X</div>
+    </div>
+
     <script>
         let left = document.querySelector(".left");
         let right = document.querySelector(".right");
         let imgs = document.querySelectorAll(".box .left img");
+        let close = document.querySelector(".close");
         console.log(imgs);
+
         imgs[0].onclick = function () {
             this.remove();
         };
@@ -58,6 +85,9 @@
         };
         imgs[2].onclick = function () {
             this.remove();
+        };
+        close.onclick = function () {
+            this.parentNode.remove();
         };
 
     </script>
