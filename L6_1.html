@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #f9adad;
+
+            div {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 30px;
+                height: 30px;
+                background-color: #f04949;
+
+                &:nth-child(1) {
+                    left: 5px;
+                    top: 5px;
+                    border-radius: 9999px 0 0 0;
+                }
+
+                &:nth-child(2) {
+                    left: initial;
+                    right: 5px;
+                    top: 5px;
+                    border-radius: 0 9999px 0 0;
+                }
+
+                &:nth-child(3) {
+                    left: initial;
+                    top: initial;
+                    right: 5px;
+                    bottom: 5px;
+                    border-radius: 0 0 9999px 0;
+                }
+
+                &:nth-child(4) {
+                    top: initial;
+                    left: 5px;
+                    bottom: 5px;
+                    border-radius: 0 0 0 9999px;
+                }
+
+                &:nth-child(5) {
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    </style>
+    <title>字串的表現方法</title>
+</head>
+
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>1</div>
+    </div>
+
+    <script>
+        const first = "Ben";
+        const last = 'Chen';
+        const mid = `D`;
+
+        console.log(first + " " + mid + " " + last); // 字串相加, 字串組合
+        console.log(`${first} ${mid} ${last}`); // 反引號字串組合法, 可以插入變數
+        console.log("Ben is a \"teacher\".");
+        console.log("Ben \nis \na \n\"teacher\"."); // 跳脫字元在主控台換行輸出
+
+        console.log("Ben \
+        is \
+        a \
+        \"teacher\"."); // 跳脫字元用來組合字串中的換行
+
+        console.log(`Ben 
+        is 
+        a 
+        \"teacher\".`); // 反引號字串可以直接支援字串ENTER換行
+
+
+
+
+
+    </script>
+</body>
+
+</html>
