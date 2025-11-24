@@ -42,11 +42,20 @@
     </div>
 
     <script>
+        let left = document.querySelector(".left");
         let right = document.querySelector(".right");
         let imgs = document.querySelectorAll(".box .left img");
         console.log(imgs);
         imgs[0].onclick = function () {
-            right.append(imgs[0]);
+            // this, 在 function 中, 在 onclick 事件中, 等同於被指定事件的元素
+            console.log(this);
+            console.log(this.parentElement.className);
+            if (this.parentElement.className == "left") {
+                right.append(imgs[0]);
+            } else {
+                left.append(imgs[0]);
+            }
+            // right.append(imgs[0]);
         };
         imgs[1].onclick = function () {
             right.append(imgs[1]);
