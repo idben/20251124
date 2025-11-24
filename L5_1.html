@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判斷類型</title>
+</head>
+
+<body>
+    <script>
+        console.log(typeof "123");
+        console.log(typeof '123');
+        console.log(typeof `123`); // 反引號一組的字串
+        console.log(typeof 123);
+        console.log(typeof NaN); // Not a Number Number.NaN
+        console.log(typeof true);
+        console.log(typeof false);
+        console.log(typeof []);
+        console.log(Array.isArray([])); // 判斷是否為陣列
+        console.log(typeof {});
+        console.log(typeof new Date());
+        console.log(typeof money);
+        console.log(typeof undefined);
+        console.log(typeof null);
+
+        // falsy 家族: undefined, null
+        // !變數 可以判斷是否為 undefined 或 null
+        // if(!money){}
+
+    </script>
+</body>
+
+</html>
