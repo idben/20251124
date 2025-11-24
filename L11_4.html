@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+            display: flex;
+        }
+
+        .left {
+            background-color: #ecd968;
+            /* width: 50%; */
+            /* flex: 1 佔剩下的寬度 */
+            flex: 1;
+        }
+
+        .right {
+            background-color: #f48383;
+            /* width: 50%; */
+            flex: 1;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <title>append/prepend 現有元素</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">
+            <!-- picsum -->
+            <img src="https://picsum.photos/id/1076/600/400" alt="">
+            <img src="https://picsum.photos/id/1081/600/400" alt="">
+            <img src="https://picsum.photos/id/743/600/400" alt="">
+        </div>
+        <div class="right"></div>
+    </div>
+
+    <script>
+        let right = document.querySelector(".right");
+        let imgs = document.querySelectorAll(".box .left img");
+        console.log(imgs);
+        imgs[0].onclick = function () {
+            right.append(imgs[0]);
+        };
+        imgs[1].onclick = function () {
+            right.append(imgs[1]);
+        };
+        imgs[2].onclick = function () {
+            right.append(imgs[2]);
+        };
+
+    </script>
+</body>
+
+</html>
