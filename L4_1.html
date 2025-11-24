@@ -44,10 +44,22 @@
             console.log(aaa1);
             console.log(aaa2);
             var insideC1 = 2000;
+            let insideC2 = 2000;
         }
 
         c1();
         // console.log(insideC1); // var 是 function scope
+        // console.log(insideC2); // const/let 是 block scope
+
+        if (aaa == 300) {
+            console.log("------aaa=300----");
+            var if1 = 3000;
+            let if2 = 3000;
+        }
+        console.log(if1);
+        // console.log(if2);
+
+
 
 
 
