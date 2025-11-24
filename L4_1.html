@@ -10,6 +10,12 @@
 <body>
 
     <script>
+        var money; // var 宣告的變數會提升到最上面進行宣告
+        console.log(money);
+        // var money = 10000;
+        money = 10000;
+
+
         var aaa = 100;
         let aaa1 = 100;
         const aaa2 = 100;
@@ -36,17 +42,6 @@
         console.log(bbb1);
         // const bbb2; // 只有 const 宣告的變數, 馬上要用等號給值
 
-
-        function c1() {
-            var aaa = "ABC123"; // 同名變數當中, 優先使用 function 裡宣告的
-            console.log("-------c1------");
-            console.log(aaa);
-            console.log(aaa1);
-            console.log(aaa2);
-            var insideC1 = 2000;
-            let insideC2 = 2000;
-        }
-
         c1();
         // console.log(insideC1); // var 是 function scope
         // console.log(insideC2); // const/let 是 block scope
@@ -63,8 +58,16 @@
 
 
 
-
-
+        // 寫在全域位置的 function 也會提升
+        function c1() {
+            var aaa = "ABC123"; // 同名變數當中, 優先使用 function 裡宣告的
+            console.log("-------c1------");
+            console.log(aaa);
+            console.log(aaa1);
+            console.log(aaa2);
+            var insideC1 = 2000;
+            let insideC2 = 2000;
+        }
     </script>
 </body>
 
