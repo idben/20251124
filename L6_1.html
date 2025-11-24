@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
         .box {
             position: relative;
             width: 100px;
@@ -62,15 +68,30 @@
 </head>
 
 <body>
-    <div class="box">
+    <!-- <div class="box">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
         <div>1</div>
-    </div>
+    </div> -->
 
     <script>
+        let num = 0;
+        window.onclick = function () {
+            num++;
+            // num = num+1;
+            const node = document.createElement("div");
+            node.classList.add("box");
+            node.innerHTML = `<div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div>${num}</div>`;
+            document.body.append(node);
+        };
+
+
         const first = "Ben";
         const last = 'Chen';
         const mid = `D`;
