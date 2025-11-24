@@ -50,18 +50,27 @@
             // this, 在 function 中, 在 onclick 事件中, 等同於被指定事件的元素
             console.log(this);
             console.log(this.parentElement.className);
+            // parentElement 父層元素
             if (this.parentElement.className == "left") {
-                right.append(imgs[0]);
+                right.append(this);
             } else {
-                left.append(imgs[0]);
+                left.append(this);
             }
             // right.append(imgs[0]);
         };
         imgs[1].onclick = function () {
-            right.append(imgs[1]);
+            if (this.parentElement.className == "left") {
+                right.append(this);
+            } else {
+                left.append(this);
+            }
         };
         imgs[2].onclick = function () {
-            right.append(imgs[2]);
+            if (this.parentElement.className == "left") {
+                right.append(this);
+            } else {
+                left.append(this);
+            }
         };
 
     </script>
