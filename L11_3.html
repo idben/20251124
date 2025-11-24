@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>建立 HTML 物件</title>
+</head>
+
+<body>
+    <div class="area">
+        <h1>要加入的區域</h1>
+    </div>
+
+    <script>
+        let area = document.querySelector(".area");
+        let h1 = document.querySelector("h1");
+
+        let node = document.createElement("h2");
+        node.innerHTML = "123abc";
+        // area.appendChild(node); // 插入到指定元素的最後
+        // area.append(node); // 往最後插, 記憶這個, 因為有對應的 prepend, 比較強大
+        area.prepend(node); // 往最前面插
+    </script>
+</body>
+
+</html>
