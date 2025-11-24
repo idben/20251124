@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+    <title>設定 HTML 物件內容</title>
+</head>
+
+<body>
+    <p>比賽工業眾人愛情，網站等等，<span class="hide">是這樣，那。</span></p>
+    123
+
+    <script>
+        let p = document.querySelector("p");
+
+        // p.innerHTML = p.innerText; // 設定 HTML 內容
+        // p.outerHTML = p.innerText; // 這樣的使用可能會遇到跑版
+        // p.innerText = p.innerText; // 設定純文字內容
+        p.textContent = p.innerText; // 設定元素的原始文字內容
+
+    </script>
+</body>
+
+</html>
