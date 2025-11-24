@@ -37,6 +37,18 @@
         // const bbb2; // 只有 const 宣告的變數, 馬上要用等號給值
 
 
+        function c1() {
+            var aaa = "ABC123"; // 同名變數當中, 優先使用 function 裡宣告的
+            console.log("-------c1------");
+            console.log(aaa);
+            console.log(aaa1);
+            console.log(aaa2);
+            var insideC1 = 2000;
+        }
+
+        c1();
+        // console.log(insideC1); // var 是 function scope
+
 
 
 
