@@ -22,7 +22,12 @@
         // p.innerHTML = p.innerText; // 設定 HTML 內容
         // p.outerHTML = p.innerText; // 這樣的使用可能會遇到跑版
         // p.innerText = p.innerText; // 設定純文字內容
-        p.textContent = p.innerText; // 設定元素的原始文字內容
+        // p.textContent = p.innerText; // 設定元素的原始文字內容
+
+        // 試著把 p 的內容變成一張圖
+        // https://www.pexels.com/
+        // https://unsplash.com/
+        p.innerHTML = "<img src='https://images.pexels.com/photos/30404377/pexels-photo-30404377.jpeg'>";
 
     </script>
 </body>
