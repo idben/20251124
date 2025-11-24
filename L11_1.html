@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+    <title>取得 HTML 物件內容</title>
+</head>
+
+<body>
+    <p>比賽工業眾人愛情，網站等等，<span class="hide">是這樣，那。</span></p>
+
+    <script>
+        let p = document.querySelector("p");
+        console.log(p.innerHTML);
+        console.log(p.outerHTML);
+
+
+    </script>
+</body>
+
+</html>
