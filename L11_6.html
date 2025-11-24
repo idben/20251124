@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .auth {
+            font-size: 12px;
+            font-weight: normal;
+            color: red;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li.active {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <title>修改 HTML 物件樣式</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>選項1</li>
+            <li>選項2</li>
+            <li>選項3</li>
+        </ul>
+    </nav>
+    <div class="area">
+        <h1>靜夜思 <span class="a123">李白</span></h1>
+        <p>
+        <div class="line">床前明月光，</div>
+        <div class="line">疑是地上霜。</div>
+        <div class="line">舉頭望明月，</div>
+        <div class="line">低頭思故鄉。</div>
+        </p>
+    </div>
+
+    <script>
+        let auth = document.querySelector("span");
+        // auth.style.fontSize = "12px";
+        // auth.style.fontWeight = "normal";
+        // auth.style.color = "red";
+
+        // auth.className = "auth"; // 樣式的覆蓋
+
+        auth.classList.add("auth"); // 樣式的附加
+
+        let lis = document.querySelectorAll("nav ul li");
+        lis[0].onclick = function () {
+            lis[1].classList.remove("active");
+            lis[2].classList.remove("active");
+            this.classList.add("active");
+        };
+        lis[1].onclick = function () {
+            lis[0].classList.remove("active");
+            lis[2].classList.remove("active");
+            this.classList.add("active");
+        };
+        lis[2].onclick = function () {
+            lis[1].classList.remove("active");
+            lis[0].classList.remove("active");
+            this.classList.add("active");
+        };
+    </script>
+</body>
+
+</html>
